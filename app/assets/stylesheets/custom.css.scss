@@ -1,0 +1,25 @@
+@import "bootstrap";
+
+.navbar {
+  background-color:black !important;
+
+} 
+
+.nav-link { 
+  color: white !important;
+}
+.jumbotron {
+  background-image: asset-url('bar.jpg');
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: darkgrey;
+  height: 1000px;
+  padding-top: 2%;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+footer {
+  height:5vh;
+}

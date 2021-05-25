@@ -1,0 +1,16 @@
+<h1>Thank you for you inscription <%= current_user.email%> </h1>
+<h1>New participation</h1>
+
+<%= form_for @participation, url: {action: "create"} do |f| %>
+ 
+  <div class="form_group">
+    <%= f.label :stripe_customer_id %>
+    <%= f.text_field :stripe_customer_id %>
+  </div>
+  <div class="form_group">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Main Page', events_path %>

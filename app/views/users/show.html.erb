@@ -1,0 +1,33 @@
+<div class="container mb-5 mt-2">
+  <div class="row justify-content-center text-center mt-2">
+  <h1>User Profile</h1>
+    <div class="m-5">
+    <p>Bienvenue sur la page d'ajout d'un avatar pour le User portant l'id : <%=@user.id%></p>
+    <h3>Avatar actuel</h3>
+    <%if @user.avatar.attached?%>
+        <%= image_tag @user.avatar, alt: 'avatar' %>
+    <%else%>
+      <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+    <%end%>
+    </div>
+    <div class="container mt-5">
+<% if @user == current_user %>
+  <a href="<%= edit_user_registration_path %>" class="card-link btn btn-dark">Edit Email/password</a>
+<% end %>
+  <% if @user == current_user %>
+    <h3>Changer d'avatar ?</h3>
+    <%= form_tag user_avatars_path(@user), multipart: true do %>
+      <%= file_field_tag :avatar %>
+      <%= submit_tag "mettre à jour" %>
+    <% end %>
+  <% end %>
+</div>
+</div>
+  
+</div>
+
+
+
+
+
+
